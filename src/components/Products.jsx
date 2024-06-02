@@ -41,7 +41,12 @@ function Products() {
   };
 
   return (
-    <div className="sm:mt-32 relative">
+    <motion.div initial={{ rotate: 0, y: "40%", opacity: 0 }}
+    whileInView={{ rotate: 0, y: 0, opacity: 1 }}
+    transition={{
+      ease: [0.33, 1, 0.68, 1],
+      duration: 0.8,
+    }}  className="sm:mt-32 relative">
       {products.map((val, i) => (
         <Product key={i} val={val} mover={mover} count={i} />
       ))}
@@ -83,7 +88,7 @@ function Products() {
           </motion.div>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

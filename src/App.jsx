@@ -16,7 +16,7 @@ function App() {
  const locomotiveScroll = new LocomotiveScroll();
 
   return (
-    <div className="w-full bg-zinc-900 text-white font-['satoshi']">
+    <div className="w-full overflow-x-hidden bg-zinc-900 text-white font-['satoshi']">
       <Navbar />
       <Work />
       <Stripes />
